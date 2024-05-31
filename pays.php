@@ -44,12 +44,11 @@ function creation_destinations()
     $contenu = '';
     // pour extraire le numéro de la catégorie:
     // get_cat_id(string) int
-    $pays = get_categories();
+    $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
 
     foreach ($pays as $un_pays) {
-        $nom = $un_pays->name;
-        $id_cat = $un_pays->term_id;
-        $contenu .= '<button id="cat_' . $id_cat . '" class= "bouton__categorie">' . $nom . '</button>';
+        $nom = $un_pays;
+        $contenu .= '<button class= "bouton__categorie">' . $nom . '</button>';
     }
     $contenu .= '<div class="contenu__restapi"></div>';
     return $contenu;
