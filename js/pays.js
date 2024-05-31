@@ -4,17 +4,17 @@
 
 
     let boutons_pays = document.querySelectorAll(".bouton__pays");
-    console.log(boutons_pays.length);
+    console.log(boutons_pays);
 
-    let pays = 3
-    let numero = 0;
-    for (const elm of bouton_pays) {
+    let pays = "France";
+    let url = `https://gftnth00.mywhc.ca/tim37/wp-json/wp/v2/posts?search=${pays}`;
+    restApi(url);
+    for (const elm of boutons_pays) {
 
-        numero++;
-        elm.dataset.num = numero;
         elm.addEventListener("mousedown", function (e) {
-            pays = e.target.id.split('_')[1];
-            let url = `https://gftnth00.mywhc.ca/tim37/wp-json/wp/v2/posts?pays=${pays}`;
+            let paysActif = e.target.innerHTML;
+            url = `https://gftnth00.mywhc.ca/tim37/wp-json/wp/v2/posts?search=${paysActif}`;
+
             restApi(url);
         });
     }
