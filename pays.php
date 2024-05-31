@@ -49,7 +49,7 @@ function creation_pays()
         $nom = $pays[$i];
         $contenuPays .= '<button class= "bouton__pays">' . $nom . '</button>';
     }
-    $contenuPays .= '<div class="contenu__restapi"></div>';
+    $contenuPays .= '</div><div class="contenu__restapi"></div>';
     return $contenuPays;
 }
 
@@ -60,5 +60,5 @@ for ($i = 0; $i < count($pays) - 1; $i++) {
     $id_categorie = $elm_categorie->term_id;
     $contenu .= '<button class="bouton__pays'
         . $nom_categorie .
-        '</button></div>';
+        '</button>';
 }
