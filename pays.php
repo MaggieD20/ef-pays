@@ -41,7 +41,7 @@ add_action('wp_enqueue_scripts', 'pays_enqueue');
 /* Création de la liste des destinations en HTML */
 function creation_pays()
 {
-    $contenuPays = '<div class = conteneur_btn_pays">';
+    $contenuPays = '<div class = "conteneur_btn_pays">';
     // get_cat_id(string) int
     $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
 

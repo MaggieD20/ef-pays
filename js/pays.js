@@ -53,12 +53,12 @@
                     // transformer le coontenue en tableau et faire un split
                     console.log(titre);
                     let carte = document.createElement("div");
-                    carte.classList.add("restapi__carte");
+                    carte.classList.add("restpays__carte");
 
-                    carte.innerHTML = `
-        <h2>${titre}</h2>
-        <p>${contenu}</p>
-        <a href="${lien}">voir la suite</a>
+                    carte.innerHTML =
+                        `<a href="${lien}"><h2>${titre}</h2></a>
+                        <div class = "info_pays"><p>${contenu}</p>
+                        </div>
         `;
                     restapi.appendChild(carte);
                 });

@@ -11,3 +11,14 @@
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-arriere-entete);
 }
+
+.restpays__carte {
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.info_pays {
+    display: flex;
+}
