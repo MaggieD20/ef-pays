@@ -4,24 +4,23 @@
 
 
     let boutons_pays = document.querySelectorAll(".bouton__pays");
-    console.log(boutons_pays);
 
     let pays = "France";
     let url = `https://gftnth00.mywhc.ca/tim37/wp-json/wp/v2/posts?search=${pays}`;
-    restApi(url);
+    restApiPays(url);
     for (const elm of boutons_pays) {
 
         elm.addEventListener("mousedown", function (e) {
             let paysActif = e.target.innerHTML;
             url = `https://gftnth00.mywhc.ca/tim37/wp-json/wp/v2/posts?search=${paysActif}`;
 
-            restApi(url);
+            restApiPays(url);
         });
     }
 
 
 
-    function restApi(url) {
+    function restApiPays(url) {
         // Effectuer la requête HTTP en utilisant fetch()
         fetch(url)
             .then(function (response) {

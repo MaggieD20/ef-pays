@@ -21,7 +21,7 @@ function pays_enqueue()
     // wp_enqueue_scripts // le hook
 
     $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css");
-    $version_js = filemtime(plugin_dir_path(__FILE__) . "js/voyage.js");
+    $version_js = filemtime(plugin_dir_path(__FILE__) . "js/pays.js");
     wp_enqueue_style(
         'em_plugin_voyage_css',
         plugin_dir_url(__FILE__) . "style.css",
