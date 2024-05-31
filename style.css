@@ -1,1 +1,13 @@
-/*# sourceMappingURL=style.css.map */
+.bouton__pays {
+  background-color: var(--couleur-arriere-entete);
+  gap: 2rem;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--couleur-arriere-footer);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.bouton__pays:hover {
+  background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-arriere-entete);
+}/*# sourceMappingURL=style.css.map */
