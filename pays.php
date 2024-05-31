@@ -41,14 +41,13 @@ $pays = [];
 /* Création de la liste des destinations en HTML */
 function creation_pays()
 {
-    $contenuPays = '';
+    $contenuPays = '<div class = conteneur_btn_pays">';
     // get_cat_id(string) int
     $pays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
 
     for ($i = 0; $i < count($pays) - 1; $i++) {
         $nom = $pays[$i];
-        print($nom);
-        $contenuPays .= '<button class= "bouton__categorie">' . $nom . '</button>';
+        $contenuPays .= '<button class= "bouton__pays">' . $nom . '</button>';
     }
     $contenuPays .= '<div class="contenu__restapi"></div>';
     return $contenuPays;
@@ -56,12 +55,10 @@ function creation_pays()
 
 add_shortcode('pays', 'creation_pays');
 
-// foreach ($pays as $un_pays) {
-//     $nom = $un_pays->name;
-//     $id_categorie = $un_pays->term_id;
-//     $contenu .= '<button class="bouton_pays" id="cat_'
-//         . $id_categorie .
-//         '">'
-//         . $nom_categorie .
-//         '</button>';
-// }
+for ($i = 0; $i < count($pays) - 1; $i++) {
+    $nom_categorie = $elm_categorie->name;
+    $id_categorie = $elm_categorie->term_id;
+    $contenu .= '<button class="bouton__pays'
+        . $nom_categorie .
+        '</button></div>';
+}
